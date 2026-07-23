@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-22 23:06:05 PDT",
+  "last_updated": "2026-07-22 23:45:34 PDT",
   "expires_at": "2026-07-22T23:59:59-0700",
   "deals": [
     {
@@ -28,6 +28,34 @@
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
       "activated_by": "St. Louis Cardinals at Los Angeles Angels",
+      "expires_at": "2026-07-22T23:59:59-0700"
+    },
+    {
+      "id": "dodgers-ubereats-01",
+      "team": "Los Angeles Dodgers",
+      "team_id": "19",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Uber Eats",
+      "promotion_name": "Save on the Road",
+      "trigger": {
+        "type": "stat",
+        "location": "away",
+        "metric": "saves",
+        "threshold": 1
+      },
+      "reward": "$15 off $20+ order",
+      "coupon_code": "SAVEAWAY",
+      "redemption_method": "Uber Eats app (delivery, LA area)",
+      "redemption_window": "Next day / see app terms",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://dodgerblue.com/free-food-other-discounts-for-dodgers-home-games-in-2026/2026/05/26/",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=ubereats.com&sz=128",
+      "active": true,
+      "activated_by": "Los Angeles Dodgers at Philadelphia Phillies",
       "expires_at": "2026-07-22T23:59:59-0700"
     }
   ]
