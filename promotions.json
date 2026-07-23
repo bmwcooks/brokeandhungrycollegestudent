@@ -1,0 +1,70 @@
+{
+  "promotions": [
+    {
+      "id": "dodgers-panda-01",
+      "team": "Los Angeles Dodgers",
+      "team_id": "119",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Panda Express",
+      "promotion_name": "Dodgers Win",
+      "trigger": {
+        "type": "win",
+        "location": "home",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "$7 Two-Entree Plate",
+      "coupon_code": "DODGERSWIN",
+      "redemption_method": "Panda Express App",
+      "redemption_window": "Next day until 11:59 PM",
+      "valid_states": ["CA"],
+      "source": "https://www.mlb.com/dodgers/tickets/promotions",
+      "active": true
+    },
+    {
+      "id": "padres-jack-01",
+      "team": "San Diego Padres",
+      "team_id": "135",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Jack in the Box",
+      "promotion_name": "Jumbo Jack",
+      "trigger": {
+        "type": "stat",
+        "location": "any",
+        "metric": "home_runs",
+        "threshold": 1
+      },
+      "reward": "Free Jumbo Jack with large drink purchase",
+      "coupon_code": "GOPADRES26",
+      "redemption_method": "Jack in the Box App",
+      "redemption_window": "Next day",
+      "valid_states": ["CA"],
+      "source": "https://www.mlb.com/padres/apps/partners",
+      "active": true
+    },
+    {
+      "id": "clippers-cfa-01",
+      "team": "LA Clippers",
+      "team_id": "12",
+      "league": "nba",
+      "sport": "basketball",
+      "restaurant": "Chick-fil-A",
+      "promotion_name": "Fowl Shot",
+      "trigger": {
+        "type": "win",
+        "location": "home",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "Free Chick-fil-A Chicken Sandwich",
+      "coupon_code": "None (Location-based in app)",
+      "redemption_method": "Chick-fil-A App",
+      "redemption_window": "Next day until 11:59 PM",
+      "valid_states": ["CA"],
+      "source": "https://www.nba.com/clippers/promotions",
+      "active": true
+    }
+  ]
+}
