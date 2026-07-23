@@ -59,12 +59,12 @@
       "league": "nba",
       "sport": "basketball",
       "restaurant": "Chick-fil-A",
-      "promotion_name": "Fowl Shot",
+      "promotion_name": "Missed Free Throws",
       "trigger": {
-        "type": "win",
+        "type": "stat",
         "location": "home",
-        "metric": "score",
-        "threshold": null
+        "metric": "opponent_consecutive_missed_ft_q4",
+        "threshold": 2
       },
       "reward": "Free Chick-fil-A Chicken Sandwich",
       "coupon_code": "None (Location-based in app)",
@@ -73,7 +73,7 @@
       "valid_states": [
         "CA"
       ],
-      "source": "https://www.nba.com/clippers/promotions",
+      "source": "https://www.cfasocal.com/promotion-details",
       "active": true,
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128"
@@ -337,6 +337,188 @@
       "active": true,
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128"
+    },
+    {
+      "id": "dodgers-ubereats-01",
+      "team": "Los Angeles Dodgers",
+      "team_id": "19",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Uber Eats",
+      "promotion_name": "Save on the Road",
+      "trigger": {
+        "type": "stat",
+        "location": "away",
+        "metric": "saves",
+        "threshold": 1
+      },
+      "reward": "$15 off $20+ order",
+      "coupon_code": "SAVEAWAY",
+      "redemption_method": "Uber Eats app (delivery, LA area)",
+      "redemption_window": "Next day / see app terms",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://dodgerblue.com/free-food-other-discounts-for-dodgers-home-games-in-2026/2026/05/26/",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=ubereats.com&sz=128",
+      "active": true
+    },
+    {
+      "id": "dodgers-ampm-01",
+      "team": "Los Angeles Dodgers",
+      "team_id": "19",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "ampm",
+      "promotion_name": "Steal a Base, Steal a Hot Dog",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "stolen_bases",
+        "threshold": 1
+      },
+      "reward": "Free Dodger Dog + 16oz Coca-Cola",
+      "coupon_code": "None (ampm app barcode)",
+      "redemption_method": "ampm App \u2014 scan barcode at cashier",
+      "redemption_window": "Until midnight day after game",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://lahomewin.com/",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=ampm.com&sz=128",
+      "active": true
+    },
+    {
+      "id": "rams-carlsjr-01",
+      "team": "Los Angeles Rams",
+      "team_id": "14",
+      "league": "nfl",
+      "sport": "football",
+      "restaurant": "Carl's Jr.",
+      "promotion_name": "Famous Star Picks",
+      "trigger": {
+        "type": "stat",
+        "location": "any",
+        "metric": "interceptions",
+        "threshold": 1
+      },
+      "reward": "Free Famous Star",
+      "coupon_code": "None (Carl's Jr. App)",
+      "redemption_method": "Carl's Jr. App",
+      "redemption_window": "Unlocks 2 days after game; expires 1 week from unlock",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.therams.com/game-day/promotions",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/lar.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=carlsjr.com&sz=128",
+      "active": true
+    },
+    {
+      "id": "49ers-mountainmikes-01",
+      "team": "San Francisco 49ers",
+      "team_id": "25",
+      "league": "nfl",
+      "sport": "football",
+      "restaurant": "Mountain Mike's Pizza",
+      "promotion_name": "When the 49ers Win, You Win",
+      "trigger": {
+        "type": "win",
+        "location": "any",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "49% off 1 large pizza (Tue/Wed after a win)",
+      "coupon_code": "None (Mountain Mike's App)",
+      "redemption_method": "Mountain Mike's App",
+      "redemption_window": "Tuesday & Wednesday following a win",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mountainmikespizza.com/wp-content/uploads/2025/08/MMP_PromoTriggerLocations_2025-1.pdf",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mountainmikespizza.com&sz=128",
+      "active": true
+    },
+    {
+      "id": "49ers-ubereats-01",
+      "team": "San Francisco 49ers",
+      "team_id": "25",
+      "league": "nfl",
+      "sport": "football",
+      "restaurant": "Uber Eats",
+      "promotion_name": "2 Touchdowns",
+      "trigger": {
+        "type": "stat",
+        "location": "any",
+        "metric": "touchdowns",
+        "threshold": 2
+      },
+      "reward": "50% off (up to $20) on $25+ order",
+      "coupon_code": "None (Uber Eats app)",
+      "redemption_method": "Uber Eats app",
+      "redemption_window": "See app for limited-time terms",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.49ers.com/fans/contests-promotions",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=ubereats.com&sz=128",
+      "active": true
+    },
+    {
+      "id": "ducks-cfa-01",
+      "team": "Anaheim Ducks",
+      "team_id": "25",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Chick-fil-A",
+      "promotion_name": "Score 5 Goals",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "goals",
+        "threshold": 5
+      },
+      "reward": "Free Original Chick-fil-A Chicken Sandwich",
+      "coupon_code": "None (Location-based in app)",
+      "redemption_method": "Chick-fil-A App (claim at Honda Center)",
+      "redemption_window": "Claim by 11:59 PM game night; redeem within 3 business days",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/ducks/fans/cfa-5goals-ana",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
+      "active": true
+    },
+    {
+      "id": "lafc-cfa-01",
+      "team": "LAFC",
+      "team_id": "18966",
+      "league": "mls",
+      "sport": "soccer",
+      "restaurant": "Chick-fil-A",
+      "promotion_name": "LAFC Home Win",
+      "trigger": {
+        "type": "win",
+        "location": "home",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "Free Original Chick-fil-A Chicken Sandwich",
+      "coupon_code": "None (Location-based in app)",
+      "redemption_method": "Chick-fil-A App (claim at BMO Stadium)",
+      "redemption_window": "See Chick-fil-A App / SoCal promo terms",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.cfasocal.com/promotion-details",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
+      "active": true
     }
   ]
 }
