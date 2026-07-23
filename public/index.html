@@ -13,6 +13,9 @@
             --accent: #38bdf8;
             --border: #334155;
             --tag-bg: #0284c7;
+            --toast-bg: #0ea5e9;
+            --danger: #f87171;
+            --ok: #4ade80;
         }
 
         [data-theme="light"] {
@@ -23,36 +26,152 @@
             --accent: #0284c7;
             --border: #e2e8f0;
             --tag-bg: #0369a1;
+            --toast-bg: #0369a1;
+            --danger: #dc2626;
+            --ok: #16a34a;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: var(--bg); color: var(--text-primary); padding: 2rem 1rem; line-height: 1.5; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            padding: 2rem 1rem;
+            line-height: 1.5;
+        }
         .container { max-width: 1100px; margin: 0 auto; }
-        
-        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 1rem; }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
         h1 { font-size: 1.8rem; font-weight: 700; }
-        
+
         .controls { display: flex; gap: 0.75rem; margin-bottom: 2rem; flex-wrap: wrap; }
-        input, select, button { padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid var(--border); background: var(--card-bg); color: var(--text-primary); font-size: 0.95rem; }
+        input, select, button {
+            padding: 0.6rem 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--card-bg);
+            color: var(--text-primary);
+            font-size: 0.95rem;
+        }
         input { flex: 1; min-width: 200px; }
         button { cursor: pointer; font-weight: 600; }
-        
+
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
-        .card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
-        
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem; }
-        .restaurant { font-size: 1.3rem; font-weight: 700; color: var(--accent); }
-        .badge { background: var(--tag-bg); color: #fff; font-size: 0.75rem; font-weight: 700; padding: 0.25rem 0.5rem; border-radius: 6px; text-transform: uppercase; }
-        
-        .reward { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; }
-        .details { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 1rem; }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; }
+        .brand-row { display: flex; align-items: center; gap: 0.75rem; min-width: 0; }
+        .logo {
+            width: 40px;
+            height: 40px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: rgba(255,255,255,0.06);
+            flex-shrink: 0;
+        }
+        .logo-stack { display: flex; align-items: center; }
+        .logo-stack .logo + .logo {
+            margin-left: -10px;
+            border: 2px solid var(--card-bg);
+        }
+        .restaurant { font-size: 1.2rem; font-weight: 700; color: var(--accent); line-height: 1.25; }
+        .badge {
+            background: var(--tag-bg);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.25rem 0.5rem;
+            border-radius: 6px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .reward { font-size: 1.1rem; font-weight: 600; }
+        .details { font-size: 0.9rem; color: var(--text-secondary); }
         .details p { margin-bottom: 0.4rem; }
-        
-        .code-box { background: rgba(0,0,0,0.2); padding: 0.4rem 0.6rem; border-radius: 4px; font-family: monospace; font-size: 0.95rem; color: var(--accent); display: inline-block; }
-        .link-btn { display: inline-block; text-decoration: none; color: var(--accent); font-weight: 600; font-size: 0.9rem; margin-top: 0.5rem; }
-        
+
+        .code-row { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.15rem; }
+        .code-box {
+            background: rgba(0,0,0,0.2);
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+            font-size: 0.95rem;
+            color: var(--accent);
+            display: inline-block;
+        }
+        .copy-btn {
+            padding: 0.35rem 0.7rem;
+            font-size: 0.8rem;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-primary);
+        }
+        .copy-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .copy-btn.copied { border-color: var(--ok); color: var(--ok); }
+
+        .countdown {
+            margin-top: 0.75rem;
+            padding: 0.65rem 0.75rem;
+            border-radius: 8px;
+            border: 1px dashed var(--border);
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        .countdown strong { color: var(--text-primary); font-variant-numeric: tabular-nums; }
+        .countdown.urgent { border-color: var(--danger); color: var(--danger); }
+        .countdown.urgent strong { color: var(--danger); }
+        .countdown.expired { opacity: 0.7; }
+
+        .link-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
         .empty-state { text-align: center; padding: 3rem; color: var(--text-secondary); grid-column: 1 / -1; }
         .timestamp { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 1rem; }
+
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 1.5rem;
+            transform: translateX(-50%) translateY(120%);
+            background: var(--toast-bg);
+            color: #fff;
+            padding: 0.75rem 1.1rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            opacity: 0;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+            z-index: 1000;
+            pointer-events: none;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -62,7 +181,7 @@
                 <h1>🏆 Sports Food Deals Tracker</h1>
                 <div class="timestamp" id="timestamp">Loading updates...</div>
             </div>
-            <button onclick="toggleTheme()">Toggle Theme</button>
+            <button type="button" onclick="toggleTheme()">Toggle Theme</button>
         </header>
 
         <div class="controls">
@@ -71,6 +190,7 @@
                 <option value="all">All Leagues</option>
                 <option value="mlb">MLB</option>
                 <option value="nba">NBA</option>
+                <option value="nhl">NHL</option>
                 <option value="mls">MLS</option>
             </select>
         </div>
@@ -78,16 +198,23 @@
         <div class="grid" id="dealsGrid"></div>
     </div>
 
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+
     <script>
         let allDeals = [];
+        let defaultExpiresAt = null;
+        let countdownTimer = null;
+        let toastTimer = null;
 
         async function loadDeals() {
             try {
                 const res = await fetch('active_deals.json');
                 const data = await res.json();
                 allDeals = data.deals || [];
+                defaultExpiresAt = data.expires_at || null;
                 document.getElementById('timestamp').innerText = `Last Updated: ${data.last_updated || 'N/A'}`;
                 renderDeals(allDeals);
+                startCountdownTicker();
             } catch (err) {
                 document.getElementById('dealsGrid').innerHTML = `
                     <div class="empty-state">
@@ -97,6 +224,17 @@
             }
         }
 
+        function isCopyableCode(code) {
+            if (!code) return false;
+            const normalized = String(code).trim().toLowerCase();
+            return normalized && !normalized.startsWith('none');
+        }
+
+        function logoImg(src, alt) {
+            if (!src) return '';
+            return `<img class="logo" src="${escapeHtml(src)}" alt="${escapeHtml(alt)}" loading="lazy" width="40" height="40" onerror="this.style.display='none'">`;
+        }
+
         function renderDeals(deals) {
             const grid = document.getElementById('dealsGrid');
             if (deals.length === 0) {
@@ -104,11 +242,20 @@
                 return;
             }
 
-            grid.innerHTML = deals.map(d => `
-                <div class="card">
+            grid.innerHTML = deals.map((d, index) => {
+                const copyable = isCopyableCode(d.coupon_code);
+                const expiresAt = d.expires_at || defaultExpiresAt;
+                return `
+                <div class="card" data-expires-at="${escapeHtml(expiresAt || '')}">
                     <div>
                         <div class="card-header">
-                            <div class="restaurant">${escapeHtml(d.restaurant)}</div>
+                            <div class="brand-row">
+                                <div class="logo-stack">
+                                    ${logoImg(d.team_logo, d.team + ' logo')}
+                                    ${logoImg(d.restaurant_logo, d.restaurant + ' logo')}
+                                </div>
+                                <div class="restaurant">${escapeHtml(d.restaurant)}</div>
+                            </div>
                             <span class="badge">${escapeHtml(d.league)}</span>
                         </div>
                         <div class="reward">${escapeHtml(d.reward)}</div>
@@ -117,12 +264,26 @@
                             <p><strong>Triggered By:</strong> ${escapeHtml(d.activated_by || 'Game Performance')}</p>
                             <p><strong>Redeem Via:</strong> ${escapeHtml(d.redemption_method)}</p>
                             <p><strong>Window:</strong> ${escapeHtml(d.redemption_window)}</p>
-                            ${d.coupon_code ? `<p><strong>Code:</strong> <span class="code-box">${escapeHtml(d.coupon_code)}</span></p>` : ''}
+                            ${d.coupon_code ? `
+                                <div>
+                                    <strong>Code:</strong>
+                                    <div class="code-row">
+                                        <span class="code-box" id="code-${index}">${escapeHtml(d.coupon_code)}</span>
+                                        ${copyable ? `<button type="button" class="copy-btn" data-code="${escapeHtml(d.coupon_code)}">Copy</button>` : ''}
+                                    </div>
+                                </div>` : ''}
+                            <div class="countdown" data-countdown>Calculating time left...</div>
                         </div>
                     </div>
                     ${d.source ? `<a href="${escapeHtml(d.source)}" target="_blank" rel="noopener" class="link-btn">Official Promo Terms →</a>` : ''}
-                </div>
-            `).join('');
+                </div>`;
+            }).join('');
+
+            grid.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', () => copyCouponCode(btn));
+            });
+
+            updateCountdowns();
         }
 
         function filterDeals() {
@@ -138,13 +299,115 @@
             renderDeals(filtered);
         }
 
+        async function copyCouponCode(button) {
+            const code = button.dataset.code || '';
+            if (!code) return;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(code);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = code;
+                    textarea.setAttribute('readonly', '');
+                    textarea.style.position = 'fixed';
+                    textarea.style.left = '-9999px';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }
+
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                showToast('Copied!');
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                    button.classList.remove('copied');
+                }, 1500);
+            } catch (err) {
+                showToast('Could not copy');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove('show'), 1600);
+        }
+
+        function parseExpiresAt(value) {
+            if (!value) return getPacificMidnightTonight();
+            // Support ISO strings that may lack a colon in the timezone offset (+0000)
+            const normalized = String(value).replace(/([+-]\d{2})(\d{2})$/, '$1:$2');
+            const parsed = new Date(normalized);
+            if (!Number.isNaN(parsed.getTime())) return parsed;
+            return getPacificMidnightTonight();
+        }
+
+        function getPacificMidnightTonight() {
+            const parts = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Los_Angeles',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            }).formatToParts(new Date());
+            const lookup = Object.fromEntries(parts.map(p => [p.type, p.value]));
+            // 23:59:59 Pacific ≈ interpret via ISO with offset; use noon UTC date math fallback
+            const approx = new Date(`${lookup.year}-${lookup.month}-${lookup.day}T23:59:59-07:00`);
+            return approx;
+        }
+
+        function formatRemaining(ms) {
+            if (ms <= 0) return 'Expired';
+            const totalMinutes = Math.floor(ms / 60000);
+            const hours = Math.floor(totalMinutes / 60);
+            const minutes = totalMinutes % 60;
+            if (hours > 0) return `${hours}h ${minutes}m left`;
+            return `${minutes}m left`;
+        }
+
+        function updateCountdowns() {
+            const now = Date.now();
+            document.querySelectorAll('.card[data-expires-at]').forEach(card => {
+                const el = card.querySelector('[data-countdown]');
+                if (!el) return;
+                const expires = parseExpiresAt(card.dataset.expiresAt);
+                const remaining = expires.getTime() - now;
+                el.classList.remove('urgent', 'expired');
+
+                if (remaining <= 0) {
+                    el.classList.add('expired');
+                    el.innerHTML = '<strong>Expired</strong> — this deal window has closed.';
+                    return;
+                }
+
+                if (remaining <= 2 * 60 * 60 * 1000) el.classList.add('urgent');
+                el.innerHTML = `Expires tonight · <strong>${formatRemaining(remaining)}</strong>`;
+            });
+        }
+
+        function startCountdownTicker() {
+            clearInterval(countdownTimer);
+            updateCountdowns();
+            countdownTimer = setInterval(updateCountdowns, 30000);
+        }
+
         function toggleTheme() {
             const html = document.documentElement;
             html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
         }
 
         function escapeHtml(str) {
-            return String(str || '').replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
+            return String(str || '').replace(/[&<>"']/g, m => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[m]));
         }
 
         loadDeals();
