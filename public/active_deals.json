@@ -24,11 +24,11 @@
         "CA"
       ],
       "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/mcdonalds",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
       "active": true,
       "activated_by": "St. Louis Cardinals at Los Angeles Angels",
-      "expires_at": "2026-07-22T23:59:59-0700"
+      "expires_at": "2026-07-22T23:59:59-0700",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128"
     }
   ]
 }

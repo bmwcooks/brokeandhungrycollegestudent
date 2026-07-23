@@ -18,11 +18,13 @@
       "coupon_code": "DODGERSWIN",
       "redemption_method": "Panda Express App",
       "redemption_window": "Next day until 11:59 PM",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/dodgers/tickets/promotions",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=pandaexpress.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=pandaexpress.com&sz=128"
     },
     {
       "id": "padres-jack-01",
@@ -42,11 +44,13 @@
       "coupon_code": "GOPADRES26",
       "redemption_method": "Jack in the Box App",
       "redemption_window": "Next day",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/padres/apps/partners",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/sd.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128"
     },
     {
       "id": "clippers-cfa-01",
@@ -66,11 +70,13 @@
       "coupon_code": "None (Location-based in app)",
       "redemption_method": "Chick-fil-A App",
       "redemption_window": "Next day until 11:59 PM",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.nba.com/clippers/promotions",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lac.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128"
     },
     {
       "id": "angels-mcdonalds-01",
@@ -90,11 +96,13 @@
       "coupon_code": "None (App Rewards & Deals)",
       "redemption_method": "McDonald's App",
       "redemption_window": "Next day until 11:59 PM PST",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/mcdonalds",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128"
     },
     {
       "id": "angels-cfa-01",
@@ -114,11 +122,13 @@
       "coupon_code": "None (Location-based in app)",
       "redemption_method": "Chick-fil-A App",
       "redemption_window": "Within 3 business days",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/chickfila",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128"
     },
     {
       "id": "angels-deltaco-01",
@@ -137,12 +147,14 @@
       "reward": "Free The Del Taco with any purchase",
       "coupon_code": "None (Del Yeah! Rewards app)",
       "redemption_method": "Del Taco App",
-      "redemption_window": "Next day 10:00 AM–11:59 PM PT",
-      "valid_states": ["CA"],
+      "redemption_window": "Next day 10:00 AM\u201311:59 PM PT",
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/del-taco",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=deltaco.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=deltaco.com&sz=128"
     },
     {
       "id": "dodgers-mcdonalds-01",
@@ -162,11 +174,13 @@
       "coupon_code": "None (App Rewards & Deals)",
       "redemption_method": "McDonald's App",
       "redemption_window": "Next day until 11:59 PM",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/dodgers/tickets/promotions",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128"
     },
     {
       "id": "dodgers-jack-01",
@@ -186,11 +200,13 @@
       "coupon_code": "GODODGERS26",
       "redemption_method": "Jack in the Box App or in-store",
       "redemption_window": "Next day",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/dodgers/tickets/promotions",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128"
     },
     {
       "id": "dodgers-habit-01",
@@ -208,13 +224,15 @@
       },
       "reward": "Free Double Char with $8 minimum purchase",
       "coupon_code": "DODGERS26",
-      "redemption_method": "MyHabit account → My Offers",
+      "redemption_method": "MyHabit account \u2192 My Offers",
       "redemption_window": "Next day",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.mlb.com/dodgers/tickets/promotions",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=habitburger.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=habitburger.com&sz=128"
     },
     {
       "id": "lakers-jack-01",
@@ -234,11 +252,13 @@
       "coupon_code": "LETSGOLAKERS",
       "redemption_method": "Jack in the Box App",
       "redemption_window": "Next day",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.nba.com/lakers",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128"
     },
     {
       "id": "ducks-mcdonalds-01",
@@ -258,11 +278,13 @@
       "coupon_code": "None (App Rewards & Deals)",
       "redemption_method": "McDonald's App (breakfast hours)",
       "redemption_window": "Next day during breakfast hours",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128"
     },
     {
       "id": "sharks-tacobell-01",
@@ -282,11 +304,13 @@
       "coupon_code": "2026SHARKSTACOS04011",
       "redemption_method": "Sharks / Taco Bell promo coupon",
       "redemption_window": "See app inbox / coupon expiration",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.nhl.com/sharks",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128"
     },
     {
       "id": "lafc-ono-01",
@@ -306,11 +330,13 @@
       "coupon_code": "LAFCSCORES",
       "redemption_method": "Ono Hawaiian BBQ online order",
       "redemption_window": "Next business day",
-      "valid_states": ["CA"],
+      "valid_states": [
+        "CA"
+      ],
       "source": "https://www.lafc.com",
-      "team_logo": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
-      "restaurant_logo": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128",
-      "active": true
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128"
     }
   ]
 }
