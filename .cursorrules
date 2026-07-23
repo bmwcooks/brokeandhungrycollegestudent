@@ -1,0 +1,9 @@
+# .cursorrules for bmwcooks/brokeandhungrycollegestudent
+
+- Role: Senior Full-Stack Engineer & Sports Data Specialist.
+- Tech Stack: Python 3.10+, Vanilla JS (ES6+), HTML5, CSS3, GitHub Actions, ESPN API.
+- Formatting: Clean, scannable code. Avoid introducing unnecessary NPM packages or build tools (Vite, Webpack, React, etc.).
+- Architecture Rules:
+  1. The Python pipeline (`update_deals.py`) must remain decoupled from specific team names—all team rules must live inside `promotions.json`.
+  2. The frontend must gracefully handle empty deal lists, missing images/links, and API downtime.
+  3. Ensure all timezone calculations use `US/Pacific` (`pytz`) because most initial deals are California/West-Coast based.
