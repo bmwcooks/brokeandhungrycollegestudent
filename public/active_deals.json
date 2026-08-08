@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-07 07:15:02 PDT",
-  "expires_at": "2026-08-07T23:59:59-0700",
+  "last_updated": "2026-08-08 06:49:30 PDT",
+  "expires_at": "2026-08-08T23:59:59-0700",
   "deals": [
     {
       "id": "angels-mcdonalds-01",
@@ -27,8 +27,8 @@
       "active": true,
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
-      "activated_by": "Los Angeles Angels at Baltimore Orioles",
-      "expires_at": "2026-08-07T23:59:59-0700"
+      "activated_by": "Los Angeles Angels at Miami Marlins",
+      "expires_at": "2026-08-08T23:59:59-0700"
     }
   ]
 }
