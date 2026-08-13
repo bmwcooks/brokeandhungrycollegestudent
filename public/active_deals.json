@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-12 07:22:05 PDT",
-  "expires_at": "2026-08-12T23:59:59-0700",
+  "last_updated": "2026-08-13 07:24:03 PDT",
+  "expires_at": "2026-08-13T23:59:59-0700",
   "deals": [
     {
       "id": "dodgers-panda-01",
@@ -28,7 +28,7 @@
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=pandaexpress.com&sz=128",
       "activated_by": "Kansas City Royals at Los Angeles Dodgers",
-      "expires_at": "2026-08-12T23:59:59-0700"
+      "expires_at": "2026-08-13T23:59:59-0700"
     },
     {
       "id": "angels-mcdonalds-01",
@@ -56,7 +56,7 @@
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
       "activated_by": "Texas Rangers at Los Angeles Angels",
-      "expires_at": "2026-08-12T23:59:59-0700"
+      "expires_at": "2026-08-13T23:59:59-0700"
     }
   ]
 }
