@@ -1,0 +1,34 @@
+{
+  "last_updated": "2026-08-22 06:35:13 PDT",
+  "expires_at": "2026-08-22T23:59:59-0700",
+  "deals": [
+    {
+      "id": "dodgers-panda-01",
+      "team": "Los Angeles Dodgers",
+      "team_id": "19",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Panda Express",
+      "promotion_name": "Dodgers Win",
+      "trigger": {
+        "type": "win",
+        "location": "home",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "$7 Two-Entree Plate",
+      "coupon_code": "DODGERSWIN",
+      "redemption_method": "Panda Express App",
+      "redemption_window": "Next day until 11:59 PM",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mlb.com/dodgers/tickets/promotions",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=pandaexpress.com&sz=128",
+      "activated_by": "Pittsburgh Pirates at Los Angeles Dodgers",
+      "expires_at": "2026-08-22T23:59:59-0700"
+    }
+  ]
+}
