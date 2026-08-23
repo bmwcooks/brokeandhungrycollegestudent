@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-08-22 06:35:13 PDT",
-  "expires_at": "2026-08-22T23:59:59-0700",
+  "last_updated": "2026-08-23 06:35:55 PDT",
+  "expires_at": "2026-08-23T23:59:59-0700",
   "deals": [
     {
       "id": "dodgers-panda-01",
@@ -28,7 +28,63 @@
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=pandaexpress.com&sz=128",
       "activated_by": "Pittsburgh Pirates at Los Angeles Dodgers",
-      "expires_at": "2026-08-22T23:59:59-0700"
+      "expires_at": "2026-08-23T23:59:59-0700"
+    },
+    {
+      "id": "angels-mcdonalds-01",
+      "team": "Los Angeles Angels",
+      "team_id": "3",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "McDonald's",
+      "promotion_name": "Angels Win Fries",
+      "trigger": {
+        "type": "win",
+        "location": "any",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "Free medium fries with $2 minimum purchase",
+      "coupon_code": "None (App Rewards & Deals)",
+      "redemption_method": "McDonald's App",
+      "redemption_window": "Next day until 11:59 PM PST",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/mcdonalds",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
+      "activated_by": "Los Angeles Angels at Texas Rangers",
+      "expires_at": "2026-08-23T23:59:59-0700"
+    },
+    {
+      "id": "lafc-ono-01",
+      "team": "LAFC",
+      "team_id": "18966",
+      "league": "mls",
+      "sport": "soccer",
+      "restaurant": "Ono Hawaiian BBQ",
+      "promotion_name": "LAFC Scores First",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "goals",
+        "threshold": 1
+      },
+      "reward": "$5.99 Chicken Plate Lunch",
+      "coupon_code": "LAFCSCORES",
+      "redemption_method": "Ono Hawaiian BBQ online order",
+      "redemption_window": "Next business day",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.lafc.com",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128",
+      "activated_by": "Portland Timbers at LAFC",
+      "expires_at": "2026-08-23T23:59:59-0700"
     }
   ]
 }
