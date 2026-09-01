@@ -1,5 +1,90 @@
 {
-  "last_updated": "2026-08-31 12:27:10 PDT",
-  "expires_at": "2026-08-31T23:59:59-0700",
-  "deals": []
+  "last_updated": "2026-09-01 10:15:08 PDT",
+  "expires_at": "2026-09-01T23:59:59-0700",
+  "deals": [
+    {
+      "id": "angels-mcdonalds-01",
+      "team": "Los Angeles Angels",
+      "team_id": "3",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "McDonald's",
+      "promotion_name": "Angels Win Fries",
+      "trigger": {
+        "type": "win",
+        "location": "any",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "Free medium fries with $2 minimum purchase",
+      "coupon_code": "None (App Rewards & Deals)",
+      "redemption_method": "McDonald's App",
+      "redemption_window": "Next day until 11:59 PM PST",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/mcdonalds",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
+      "activated_by": "New York Yankees at Los Angeles Angels",
+      "expires_at": "2026-09-01T23:59:59-0700"
+    },
+    {
+      "id": "angels-cfa-01",
+      "team": "Los Angeles Angels",
+      "team_id": "3",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Chick-fil-A",
+      "promotion_name": "Hitting for Chicken",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "runs",
+        "threshold": 7
+      },
+      "reward": "Free Chick-fil-A Chicken Sandwich",
+      "coupon_code": "None (Location-based in app)",
+      "redemption_method": "Chick-fil-A App",
+      "redemption_window": "Within 3 business days",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/chickfila",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
+      "activated_by": "New York Yankees at Los Angeles Angels",
+      "expires_at": "2026-09-01T23:59:59-0700"
+    },
+    {
+      "id": "angels-deltaco-01",
+      "team": "Los Angeles Angels",
+      "team_id": "3",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "Del Taco",
+      "promotion_name": "7 Run Promotion",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "runs",
+        "threshold": 7
+      },
+      "reward": "Free The Del Taco with any purchase",
+      "coupon_code": "None (Del Yeah! Rewards app)",
+      "redemption_method": "Del Taco App",
+      "redemption_window": "Next day 10:00 AM\u201311:59 PM PT",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/del-taco",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=deltaco.com&sz=128",
+      "activated_by": "New York Yankees at Los Angeles Angels",
+      "expires_at": "2026-09-01T23:59:59-0700"
+    }
+  ]
 }
