@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-02 10:04:48 PDT",
-  "expires_at": "2026-09-02T23:59:59-0700",
+  "last_updated": "2026-09-03 09:58:45 PDT",
+  "expires_at": "2026-09-03T23:59:59-0700",
   "deals": [
     {
       "id": "dodgers-mcdonalds-01",
@@ -28,7 +28,7 @@
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
       "activated_by": "St. Louis Cardinals at Los Angeles Dodgers",
-      "expires_at": "2026-09-02T23:59:59-0700"
+      "expires_at": "2026-09-03T23:59:59-0700"
     }
   ]
 }
