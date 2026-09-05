@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-04 09:47:56 PDT",
-  "expires_at": "2026-09-04T23:59:59-0700",
+  "last_updated": "2026-09-05 08:52:05 PDT",
+  "expires_at": "2026-09-05T23:59:59-0700",
   "deals": [
     {
       "id": "dodgers-panda-01",
@@ -27,8 +27,8 @@
       "active": true,
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=pandaexpress.com&sz=128",
-      "activated_by": "St. Louis Cardinals at Los Angeles Dodgers",
-      "expires_at": "2026-09-04T23:59:59-0700"
+      "activated_by": "Washington Nationals at Los Angeles Dodgers",
+      "expires_at": "2026-09-05T23:59:59-0700"
     }
   ]
 }
