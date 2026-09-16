@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-09-15 10:34:33 PDT",
-  "expires_at": "2026-09-15T23:59:59-0700",
+  "last_updated": "2026-09-16 10:33:48 PDT",
+  "expires_at": "2026-09-16T23:59:59-0700",
   "deals": [
     {
       "id": "angels-mcdonalds-01",
@@ -28,7 +28,7 @@
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
       "activated_by": "Seattle Mariners at Los Angeles Angels",
-      "expires_at": "2026-09-15T23:59:59-0700"
+      "expires_at": "2026-09-16T23:59:59-0700"
     }
   ]
 }
