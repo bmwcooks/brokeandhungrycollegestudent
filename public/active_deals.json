@@ -1,5 +1,62 @@
 {
-  "last_updated": "2026-09-24 10:48:05 PDT",
-  "expires_at": "2026-09-24T23:59:59-0700",
-  "deals": []
+  "last_updated": "2026-09-25 10:51:24 PDT",
+  "expires_at": "2026-09-25T23:59:59-0700",
+  "deals": [
+    {
+      "id": "angels-mcdonalds-01",
+      "team": "Los Angeles Angels",
+      "team_id": "3",
+      "league": "mlb",
+      "sport": "baseball",
+      "restaurant": "McDonald's",
+      "promotion_name": "Angels Win Fries",
+      "trigger": {
+        "type": "win",
+        "location": "any",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "Free medium fries with $2 minimum purchase",
+      "coupon_code": "None (App Rewards & Deals)",
+      "redemption_method": "McDonald's App",
+      "redemption_window": "Next day until 11:59 PM PST",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.mlb.com/angels/tickets/specials/homestand-partner-offers/mcdonalds",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/laa.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
+      "activated_by": "Los Angeles Angels at Seattle Mariners",
+      "expires_at": "2026-09-25T23:59:59-0700"
+    },
+    {
+      "id": "sharks-tacobell-01",
+      "team": "San Jose Sharks",
+      "team_id": "18",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Taco Bell",
+      "promotion_name": "3 Goals = 3 Tacos",
+      "trigger": {
+        "type": "stat",
+        "location": "any",
+        "metric": "goals",
+        "threshold": 3
+      },
+      "reward": "3 free Crunchy Tacos with minimum purchase",
+      "coupon_code": "2026SHARKSTACOS04011",
+      "redemption_method": "Sharks / Taco Bell promo coupon",
+      "redemption_window": "See app inbox / coupon expiration",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/sharks",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128",
+      "activated_by": "Anaheim Ducks at San Jose Sharks",
+      "expires_at": "2026-09-25T23:59:59-0700"
+    }
+  ]
 }
