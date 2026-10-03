@@ -1,34 +1,5 @@
 {
-  "last_updated": "2026-10-02 11:17:30 PDT",
-  "expires_at": "2026-10-02T23:59:59-0700",
-  "deals": [
-    {
-      "id": "sharks-tacobell-01",
-      "team": "San Jose Sharks",
-      "team_id": "18",
-      "league": "nhl",
-      "sport": "hockey",
-      "restaurant": "Taco Bell",
-      "promotion_name": "3 Goals = 3 Tacos",
-      "trigger": {
-        "type": "stat",
-        "location": "any",
-        "metric": "goals",
-        "threshold": 3
-      },
-      "reward": "3 free Crunchy Tacos with minimum purchase",
-      "coupon_code": "2026SHARKSTACOS04011",
-      "redemption_method": "Sharks / Taco Bell promo coupon",
-      "redemption_window": "See app inbox / coupon expiration",
-      "valid_states": [
-        "CA"
-      ],
-      "source": "https://www.nhl.com/sharks",
-      "active": true,
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128",
-      "activated_by": "Florida Panthers at San Jose Sharks",
-      "expires_at": "2026-10-02T23:59:59-0700"
-    }
-  ]
+  "last_updated": "2026-10-03 10:07:27 PDT",
+  "expires_at": "2026-10-03T23:59:59-0700",
+  "deals": []
 }
