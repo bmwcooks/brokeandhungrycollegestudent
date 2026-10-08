@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-10-07 12:15:56 PDT",
-  "expires_at": "2026-10-07T23:59:59-0700",
+  "last_updated": "2026-10-08 12:12:16 PDT",
+  "expires_at": "2026-10-08T23:59:59-0700",
   "deals": [
     {
       "id": "dodgers-ubereats-01",
@@ -28,7 +28,7 @@
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=ubereats.com&sz=128",
       "active": true,
       "activated_by": "Los Angeles Dodgers at Atlanta Braves",
-      "expires_at": "2026-10-07T23:59:59-0700"
+      "expires_at": "2026-10-08T23:59:59-0700"
     }
   ]
 }
