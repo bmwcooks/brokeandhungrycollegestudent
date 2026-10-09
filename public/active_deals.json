@@ -1,34 +1,62 @@
 {
-  "last_updated": "2026-10-08 12:12:16 PDT",
-  "expires_at": "2026-10-08T23:59:59-0700",
+  "last_updated": "2026-10-09 11:42:56 PDT",
+  "expires_at": "2026-10-09T23:59:59-0700",
   "deals": [
     {
-      "id": "dodgers-ubereats-01",
-      "team": "Los Angeles Dodgers",
-      "team_id": "19",
-      "league": "mlb",
-      "sport": "baseball",
-      "restaurant": "Uber Eats",
-      "promotion_name": "Save on the Road",
+      "id": "lakers-jack-01",
+      "team": "Los Angeles Lakers",
+      "team_id": "13",
+      "league": "nba",
+      "sport": "basketball",
+      "restaurant": "Jack in the Box",
+      "promotion_name": "Lakers Win Tacos",
       "trigger": {
-        "type": "stat",
-        "location": "away",
-        "metric": "saves",
-        "threshold": 1
+        "type": "win",
+        "location": "any",
+        "metric": "score",
+        "threshold": null
       },
-      "reward": "$15 off $20+ order",
-      "coupon_code": "SAVEAWAY",
-      "redemption_method": "Uber Eats app (delivery, LA area)",
-      "redemption_window": "Next day / see app terms",
+      "reward": "2 free tacos with any sized drink purchase",
+      "coupon_code": "LETSGOLAKERS",
+      "redemption_method": "Jack in the Box App",
+      "redemption_window": "Next day",
       "valid_states": [
         "CA"
       ],
-      "source": "https://dodgerblue.com/free-food-other-discounts-for-dodgers-home-games-in-2026/2026/05/26/",
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/mlb/500/lad.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=ubereats.com&sz=128",
+      "source": "https://www.nba.com/lakers",
       "active": true,
-      "activated_by": "Los Angeles Dodgers at Atlanta Braves",
-      "expires_at": "2026-10-08T23:59:59-0700"
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128",
+      "activated_by": "Sacramento Kings at Los Angeles Lakers",
+      "expires_at": "2026-10-09T23:59:59-0700"
+    },
+    {
+      "id": "sharks-tacobell-01",
+      "team": "San Jose Sharks",
+      "team_id": "18",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Taco Bell",
+      "promotion_name": "3 Goals = 3 Tacos",
+      "trigger": {
+        "type": "stat",
+        "location": "any",
+        "metric": "goals",
+        "threshold": 3
+      },
+      "reward": "3 free Crunchy Tacos with minimum purchase",
+      "coupon_code": "2026SHARKSTACOS04011",
+      "redemption_method": "Sharks / Taco Bell promo coupon",
+      "redemption_window": "See app inbox / coupon expiration",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/sharks",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128",
+      "activated_by": "San Jose Sharks at St. Louis Blues",
+      "expires_at": "2026-10-09T23:59:59-0700"
     }
   ]
 }
