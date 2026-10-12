@@ -1,34 +1,34 @@
 {
-  "last_updated": "2026-10-11 10:56:37 PDT",
-  "expires_at": "2026-10-11T23:59:59-0700",
+  "last_updated": "2026-10-12 14:39:16 PDT",
+  "expires_at": "2026-10-12T23:59:59-0700",
   "deals": [
     {
-      "id": "lafc-ono-01",
-      "team": "LAFC",
-      "team_id": "18966",
-      "league": "mls",
-      "sport": "soccer",
-      "restaurant": "Ono Hawaiian BBQ",
-      "promotion_name": "LAFC Scores First",
+      "id": "49ers-mountainmikes-01",
+      "team": "San Francisco 49ers",
+      "team_id": "25",
+      "league": "nfl",
+      "sport": "football",
+      "restaurant": "Mountain Mike's Pizza",
+      "promotion_name": "When the 49ers Win, You Win",
       "trigger": {
-        "type": "stat",
-        "location": "home",
-        "metric": "goals",
-        "threshold": 1
+        "type": "win",
+        "location": "any",
+        "metric": "score",
+        "threshold": null
       },
-      "reward": "$5.99 Chicken Plate Lunch",
-      "coupon_code": "LAFCSCORES",
-      "redemption_method": "Ono Hawaiian BBQ online order",
-      "redemption_window": "Next business day",
+      "reward": "49% off 1 large pizza (Tue/Wed after a win)",
+      "coupon_code": "None (Mountain Mike's App)",
+      "redemption_method": "Mountain Mike's App",
+      "redemption_window": "Tuesday & Wednesday following a win",
       "valid_states": [
         "CA"
       ],
-      "source": "https://www.lafc.com",
+      "source": "https://www.mountainmikespizza.com/wp-content/uploads/2025/08/MMP_PromoTriggerLocations_2025-1.pdf",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nfl/500/sf.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mountainmikespizza.com&sz=128",
       "active": true,
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128",
-      "activated_by": "Vancouver Whitecaps at LAFC",
-      "expires_at": "2026-10-11T23:59:59-0700"
+      "activated_by": "San Francisco 49ers at Seattle Seahawks",
+      "expires_at": "2026-10-12T23:59:59-0700"
     }
   ]
 }
