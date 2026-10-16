@@ -1,62 +1,34 @@
 {
-  "last_updated": "2026-10-15 10:41:23 PDT",
-  "expires_at": "2026-10-15T23:59:59-0700",
+  "last_updated": "2026-10-16 10:15:06 PDT",
+  "expires_at": "2026-10-16T23:59:59-0700",
   "deals": [
     {
-      "id": "lafc-ono-01",
-      "team": "LAFC",
-      "team_id": "18966",
-      "league": "mls",
-      "sport": "soccer",
-      "restaurant": "Ono Hawaiian BBQ",
-      "promotion_name": "LAFC Scores First",
+      "id": "sharks-tacobell-01",
+      "team": "San Jose Sharks",
+      "team_id": "18",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Taco Bell",
+      "promotion_name": "3 Goals = 3 Tacos",
       "trigger": {
         "type": "stat",
-        "location": "home",
+        "location": "any",
         "metric": "goals",
-        "threshold": 1
+        "threshold": 3
       },
-      "reward": "$5.99 Chicken Plate Lunch",
-      "coupon_code": "LAFCSCORES",
-      "redemption_method": "Ono Hawaiian BBQ online order",
-      "redemption_window": "Next business day",
+      "reward": "3 free Crunchy Tacos with minimum purchase",
+      "coupon_code": "2026SHARKSTACOS04011",
+      "redemption_method": "Sharks / Taco Bell promo coupon",
+      "redemption_window": "See app inbox / coupon expiration",
       "valid_states": [
         "CA"
       ],
-      "source": "https://www.lafc.com",
+      "source": "https://www.nhl.com/sharks",
       "active": true,
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128",
-      "activated_by": "Austin FC at LAFC",
-      "expires_at": "2026-10-15T23:59:59-0700"
-    },
-    {
-      "id": "lafc-cfa-01",
-      "team": "LAFC",
-      "team_id": "18966",
-      "league": "mls",
-      "sport": "soccer",
-      "restaurant": "Chick-fil-A",
-      "promotion_name": "LAFC Home Win",
-      "trigger": {
-        "type": "win",
-        "location": "home",
-        "metric": "score",
-        "threshold": null
-      },
-      "reward": "Free Original Chick-fil-A Chicken Sandwich",
-      "coupon_code": "None (Location-based in app)",
-      "redemption_method": "Chick-fil-A App (claim at BMO Stadium)",
-      "redemption_window": "See Chick-fil-A App / SoCal promo terms",
-      "valid_states": [
-        "CA"
-      ],
-      "source": "https://www.cfasocal.com/promotion-details",
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
-      "active": true,
-      "activated_by": "Austin FC at LAFC",
-      "expires_at": "2026-10-15T23:59:59-0700"
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128",
+      "activated_by": "San Jose Sharks at Nashville Predators",
+      "expires_at": "2026-10-16T23:59:59-0700"
     }
   ]
 }
