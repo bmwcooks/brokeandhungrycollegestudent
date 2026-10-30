@@ -1,0 +1,62 @@
+{
+  "last_updated": "2026-10-30 11:29:28 PDT",
+  "expires_at": "2026-10-30T23:59:59-0700",
+  "deals": [
+    {
+      "id": "sharks-tacobell-01",
+      "team": "San Jose Sharks",
+      "team_id": "18",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Taco Bell",
+      "promotion_name": "3 Goals = 3 Tacos",
+      "trigger": {
+        "type": "stat",
+        "location": "any",
+        "metric": "goals",
+        "threshold": 3
+      },
+      "reward": "3 free Crunchy Tacos with minimum purchase",
+      "coupon_code": "2026SHARKSTACOS04011",
+      "redemption_method": "Sharks / Taco Bell promo coupon",
+      "redemption_window": "See app inbox / coupon expiration",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/sharks",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/sj.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=tacobell.com&sz=128",
+      "activated_by": "Vancouver Canucks at San Jose Sharks",
+      "expires_at": "2026-10-30T23:59:59-0700"
+    },
+    {
+      "id": "ducks-cfa-01",
+      "team": "Anaheim Ducks",
+      "team_id": "25",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Chick-fil-A",
+      "promotion_name": "Score 5 Goals",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "goals",
+        "threshold": 5
+      },
+      "reward": "Free Original Chick-fil-A Chicken Sandwich",
+      "coupon_code": "None (Location-based in app)",
+      "redemption_method": "Chick-fil-A App (claim at Honda Center)",
+      "redemption_window": "Claim by 11:59 PM game night; redeem within 3 business days",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/ducks/fans/cfa-5goals-ana",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
+      "active": true,
+      "activated_by": "Buffalo Sabres at Anaheim Ducks",
+      "expires_at": "2026-10-30T23:59:59-0700"
+    }
+  ]
+}
