@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-11-02 14:14:45 PST",
-  "expires_at": "2026-11-02T23:59:59-0800",
+  "last_updated": "2026-11-03 12:00:08 PST",
+  "expires_at": "2026-11-03T23:59:59-0800",
   "deals": [
     {
       "id": "lakers-jack-01",
@@ -27,92 +27,8 @@
       "active": true,
       "team_logo_url": "https://a.espncdn.com/i/teamlogos/nba/500/lal.png",
       "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=jackinthebox.com&sz=128",
-      "activated_by": "Toronto Raptors at Los Angeles Lakers",
-      "expires_at": "2026-11-02T23:59:59-0800"
-    },
-    {
-      "id": "ducks-mcdonalds-01",
-      "team": "Anaheim Ducks",
-      "team_id": "25",
-      "league": "nhl",
-      "sport": "hockey",
-      "restaurant": "McDonald's",
-      "promotion_name": "Ducks Home Win McGriddles",
-      "trigger": {
-        "type": "win",
-        "location": "home",
-        "metric": "score",
-        "threshold": null
-      },
-      "reward": "$2 Sausage, Egg & Cheese McGriddles",
-      "coupon_code": "None (App Rewards & Deals)",
-      "redemption_method": "McDonald's App (breakfast hours)",
-      "redemption_window": "Next day during breakfast hours",
-      "valid_states": [
-        "CA"
-      ],
-      "source": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
-      "active": true,
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
-      "activated_by": "Ottawa Senators at Anaheim Ducks",
-      "expires_at": "2026-11-02T23:59:59-0800"
-    },
-    {
-      "id": "lafc-ono-01",
-      "team": "LAFC",
-      "team_id": "18966",
-      "league": "mls",
-      "sport": "soccer",
-      "restaurant": "Ono Hawaiian BBQ",
-      "promotion_name": "LAFC Scores First",
-      "trigger": {
-        "type": "stat",
-        "location": "home",
-        "metric": "goals",
-        "threshold": 1
-      },
-      "reward": "$5.99 Chicken Plate Lunch",
-      "coupon_code": "LAFCSCORES",
-      "redemption_method": "Ono Hawaiian BBQ online order",
-      "redemption_window": "Next business day",
-      "valid_states": [
-        "CA"
-      ],
-      "source": "https://www.lafc.com",
-      "active": true,
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/soccer/500/18966.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=onohawaiianbbq.com&sz=128",
-      "activated_by": "Minnesota United FC at LAFC",
-      "expires_at": "2026-11-02T23:59:59-0800"
-    },
-    {
-      "id": "ducks-cfa-01",
-      "team": "Anaheim Ducks",
-      "team_id": "25",
-      "league": "nhl",
-      "sport": "hockey",
-      "restaurant": "Chick-fil-A",
-      "promotion_name": "Score 5 Goals",
-      "trigger": {
-        "type": "stat",
-        "location": "home",
-        "metric": "goals",
-        "threshold": 5
-      },
-      "reward": "Free Original Chick-fil-A Chicken Sandwich",
-      "coupon_code": "None (Location-based in app)",
-      "redemption_method": "Chick-fil-A App (claim at Honda Center)",
-      "redemption_window": "Claim by 11:59 PM game night; redeem within 3 business days",
-      "valid_states": [
-        "CA"
-      ],
-      "source": "https://www.nhl.com/ducks/fans/cfa-5goals-ana",
-      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
-      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
-      "active": true,
-      "activated_by": "Ottawa Senators at Anaheim Ducks",
-      "expires_at": "2026-11-02T23:59:59-0800"
+      "activated_by": "Miami Heat at Los Angeles Lakers",
+      "expires_at": "2026-11-03T23:59:59-0800"
     }
   ]
 }
