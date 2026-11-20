@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Sports Food Deals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #09090b;
+            --bg-elevated: #0f1117;
+            --card-bg: #12141c;
+            --card-bg-hover: #171a24;
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --accent: #7dd3fc;
+            --accent-soft: rgba(125, 211, 252, 0.12);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-strong: rgba(255, 255, 255, 0.14);
+            --surface: rgba(255, 255, 255, 0.03);
+            --surface-strong: rgba(255, 255, 255, 0.06);
+            --ok: #4ade80;
+            --danger: #fb7185;
+            --toast-bg: #e4e4e7;
+            --toast-text: #09090b;
+            --shadow: 0 0 0 1px rgba(255, 255, 255, 0.04), 0 18px 40px rgba(0, 0, 0, 0.35);
+            --radius-lg: 20px;
+            --radius-md: 14px;
+            --radius-sm: 10px;
+            --font: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        }
+
+        [data-theme="light"] {
+            --bg: #f4f4f5;
+            --bg-elevated: #ffffff;
+            --card-bg: #ffffff;
+            --card-bg-hover: #fafafa;
+            --text-primary: #18181b;
+            --text-secondary: #52525b;
+            --text-muted: #71717a;
+            --accent: #0284c7;
+            --accent-soft: rgba(2, 132, 199, 0.1);
+            --border: rgba(24, 24, 27, 0.1);
+            --border-strong: rgba(24, 24, 27, 0.16);
+            --surface: rgba(24, 24, 27, 0.03);
+            --surface-strong: rgba(24, 24, 27, 0.06);
+            --ok: #16a34a;
+            --danger: #e11d48;
+            --toast-bg: #18181b;
+            --toast-text: #fafafa;
+            --shadow: 0 0 0 1px rgba(24, 24, 27, 0.06), 0 18px 40px rgba(24, 24, 27, 0.08);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { color-scheme: dark; }
+        html[data-theme="light"] { color-scheme: light; }
+
+        body {
+            font-family: var(--font);
+            background:
+                radial-gradient(1200px 600px at 10% -10%, rgba(56, 189, 248, 0.08), transparent 55%),
+                radial-gradient(900px 500px at 90% 0%, rgba(99, 102, 241, 0.07), transparent 50%),
+                var(--bg);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+
+        .page {
+            width: min(1120px, calc(100% - 2rem));
+            margin: 0 auto;
+            padding: clamp(1.75rem, 4vw, 3.5rem) 0 clamp(4rem, 8vw, 6rem);
+        }
+
+        .topbar {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            margin-bottom: clamp(2rem, 4vw, 3rem);
+            padding: clamp(1.25rem, 3vw, 1.75rem);
+            background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(12px);
+        }
+
+        [data-theme="light"] .topbar {
+            background: var(--bg-elevated);
+        }
+
+        .topbar-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1.25rem;
+            flex-wrap: wrap;
+        }
+
+        .brand-kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.65rem;
+        }
+
+        .brand-kicker::before {
+            content: "";
+            width: 0.45rem;
+            height: 0.45rem;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-soft);
+        }
+
+        .page-title {
+            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.1;
+            color: var(--text-primary);
+        }
+
+        .page-subtitle {
+            margin-top: 0.55rem;
+            max-width: 40rem;
+            color: var(--text-secondary);
+            font-size: clamp(0.95rem, 2vw, 1.05rem);
+            font-weight: 400;
+        }
+
+        .timestamp {
+            margin-top: 0.85rem;
+            font-size: 0.8125rem;
+            color: var(--text-muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .theme-btn {
+            appearance: none;
+            border: 1px solid var(--border-strong);
+            background: var(--surface);
+            color: var(--text-primary);
+            border-radius: 999px;
+            padding: 0.65rem 1rem;
+            font: inherit;
+            font-size: 0.875rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        .theme-btn:hover {
+            background: var(--surface-strong);
+            border-color: var(--accent);
+        }
+
+        .filters {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) auto;
+            gap: 0.75rem;
+            padding-top: 0.25rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .search-wrap,
+        .select-wrap {
+            position: relative;
+        }
+
+        .search-wrap svg,
+        .select-wrap svg {
+            position: absolute;
+            left: 0.95rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1rem;
+            height: 1rem;
+            color: var(--text-muted);
+            pointer-events: none;
+        }
+
+        input[type="search"],
+        select {
+            width: 100%;
+            appearance: none;
+            border: 1px solid var(--border);
+            background: var(--bg);
+            color: var(--text-primary);
+            border-radius: var(--radius-sm);
+            padding: 0.85rem 1rem 0.85rem 2.6rem;
+            font: inherit;
+            font-size: 0.9375rem;
+            outline: none;
+            transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        }
+
+        select {
+            min-width: 10.5rem;
+            padding-right: 2.5rem;
+            cursor: pointer;
+            background-image:
+                linear-gradient(45deg, transparent 50%, var(--text-muted) 50%),
+                linear-gradient(135deg, var(--text-muted) 50%, transparent 50%);
+            background-position:
+                calc(100% - 1.15rem) calc(50% - 0.15rem),
+                calc(100% - 0.8rem) calc(50% - 0.15rem);
+            background-size: 0.35rem 0.35rem, 0.35rem 0.35rem;
+            background-repeat: no-repeat;
+        }
+
+        input[type="search"]::placeholder { color: var(--text-muted); }
+
+        input[type="search"]:focus,
+        select:focus {
+            border-color: rgba(125, 211, 252, 0.45);
+            box-shadow: 0 0 0 3px var(--accent-soft);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr));
+            gap: clamp(1.1rem, 2.5vw, 1.5rem);
+        }
+
+        .card {
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: clamp(1.35rem, 2.5vw, 1.75rem);
+            box-shadow: var(--shadow);
+            transition:
+                transform 0.22s ease,
+                background 0.22s ease,
+                border-color 0.22s ease,
+                box-shadow 0.22s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-3px) scale(1.01);
+            background: var(--card-bg-hover);
+            border-color: var(--border-strong);
+            box-shadow:
+                0 0 0 1px rgba(125, 211, 252, 0.08),
+                0 24px 48px rgba(0, 0, 0, 0.4);
+        }
+
+        .team-watermark {
+            position: absolute;
+            right: -0.75rem;
+            top: -0.5rem;
+            width: 9.5rem;
+            height: 9.5rem;
+            object-fit: contain;
+            opacity: 0.1;
+            filter: grayscale(0.2);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        [data-theme="light"] .team-watermark { opacity: 0.08; }
+
+        .card-body {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.15rem;
+            flex: 1;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+        }
+
+        .restaurant-meta {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            min-width: 0;
+        }
+
+        .restaurant-logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 999px;
+            object-fit: cover;
+            background: #fff;
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+            padding: 0.2rem;
+        }
+
+        .restaurant-name {
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            letter-spacing: -0.01em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.3rem 0.55rem;
+            border-radius: 999px;
+            border: 1px solid var(--border);
+            background: var(--surface);
+            color: var(--text-secondary);
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .reward {
+            font-size: clamp(1.45rem, 3vw, 1.85rem);
+            font-weight: 800;
+            letter-spacing: -0.045em;
+            line-height: 1.15;
+            color: var(--text-primary);
+            max-width: 18ch;
+        }
+
+        .meta-list {
+            display: grid;
+            gap: 0.55rem;
+            color: var(--text-muted);
+            font-size: 0.875rem;
+        }
+
+        .meta-row {
+            display: grid;
+            grid-template-columns: 5.5rem minmax(0, 1fr);
+            gap: 0.75rem;
+            align-items: baseline;
+        }
+
+        .meta-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+        }
+
+        .meta-value {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .code-panel {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.75rem;
+            padding: 0.75rem 0.85rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .code-copyable {
+            border-color: rgba(125, 211, 252, 0.22);
+            background: var(--accent-soft);
+        }
+
+        .code-label {
+            display: block;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .code-value {
+            font-family: var(--mono);
+            font-size: 0.9375rem;
+            font-weight: 600;
+            color: var(--accent);
+            word-break: break-all;
+        }
+
+        .copy-btn {
+            appearance: none;
+            border: 1px solid var(--border-strong);
+            background: var(--bg-elevated);
+            color: var(--text-primary);
+            border-radius: 999px;
+            padding: 0.45rem 0.8rem;
+            font: inherit;
+            font-size: 0.75rem;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+        }
+
+        .copy-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .copy-btn.copied {
+            border-color: var(--ok);
+            color: var(--ok);
+        }
+
+        .countdown {
+            display: flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.7rem 0.85rem;
+            border-radius: var(--radius-sm);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-muted);
+            font-size: 0.8125rem;
+            font-weight: 500;
+        }
+
+        .countdown::before {
+            content: "";
+            width: 0.4rem;
+            height: 0.4rem;
+            border-radius: 999px;
+            background: var(--text-muted);
+            flex-shrink: 0;
+        }
+
+        .countdown strong {
+            color: var(--text-primary);
+            font-variant-numeric: tabular-nums;
+            font-weight: 700;
+        }
+
+        .countdown.urgent {
+            border-color: rgba(251, 113, 133, 0.35);
+            color: var(--danger);
+            background: rgba(251, 113, 133, 0.08);
+        }
+
+        .countdown.urgent::before { background: var(--danger); }
+        .countdown.urgent strong { color: var(--danger); }
+        .countdown.expired { opacity: 0.7; }
+
+        .card-footer {
+            position: relative;
+            z-index: 1;
+            margin-top: 1.35rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            transition: opacity 0.2s ease;
+        }
+
+        .link-btn:hover { opacity: 0.8; }
+
+        .empty-state {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: clamp(3rem, 8vw, 5rem) 1.5rem;
+            border: 1px dashed var(--border-strong);
+            border-radius: var(--radius-lg);
+            background: var(--surface);
+            color: var(--text-secondary);
+        }
+
+        .empty-state h2,
+        .empty-state h3 {
+            color: var(--text-primary);
+            font-size: clamp(1.2rem, 3vw, 1.5rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.5rem;
+        }
+
+        .toast {
+            position: fixed;
+            left: 50%;
+            bottom: 1.5rem;
+            transform: translateX(-50%) translateY(120%);
+            background: var(--toast-bg);
+            color: var(--toast-text);
+            padding: 0.8rem 1.15rem;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            opacity: 0;
+            transition: transform 0.25s ease, opacity 0.25s ease;
+            z-index: 1000;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        @media (max-width: 720px) {
+            .filters { grid-template-columns: 1fr; }
+            .meta-row { grid-template-columns: 1fr; gap: 0.15rem; }
+            .code-panel { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <header class="topbar">
+            <div class="topbar-main">
+                <div>
+                    <div class="brand-kicker">Broke &amp; Hungry</div>
+                    <h1 class="page-title">Sports Food Deals</h1>
+                    <p class="page-subtitle">Live fast-food promotions triggered by yesterday’s games — tracked automatically, updated every morning.</p>
+                    <div class="timestamp" id="timestamp">Loading updates…</div>
+                </div>
+                <button type="button" class="theme-btn" onclick="toggleTheme()">Toggle theme</button>
+            </div>
+
+            <div class="filters" role="search">
+                <div class="search-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16Z" stroke="currentColor" stroke-width="1.8"/>
+                        <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <input type="search" id="searchInput" placeholder="Search team or restaurant…" oninput="filterDeals()" aria-label="Search deals">
+                </div>
+                <div class="select-wrap">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 6h16M7 12h10M10 18h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                    </svg>
+                    <select id="leagueSelect" onchange="filterDeals()" aria-label="Filter by league">
+                        <option value="all">All leagues</option>
+                        <option value="mlb">MLB</option>
+                        <option value="nba">NBA</option>
+                        <option value="nhl">NHL</option>
+                        <option value="nfl">NFL</option>
+                        <option value="mls">MLS</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid" id="dealsGrid"></div>
+    </div>
+
+    <div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+
+    <script>
+        let allDeals = [];
+        let defaultExpiresAt = null;
+        let countdownTimer = null;
+        let toastTimer = null;
+
+        async function loadDeals() {
+            try {
+                const res = await fetch('active_deals.json');
+                const data = await res.json();
+                allDeals = data.deals || [];
+                defaultExpiresAt = data.expires_at || null;
+                document.getElementById('timestamp').innerText = `Last updated · ${data.last_updated || 'N/A'}`;
+                renderDeals(allDeals);
+                startCountdownTicker();
+            } catch (err) {
+                document.getElementById('dealsGrid').innerHTML = `
+                    <div class="empty-state">
+                        <h2>No deals updated yet</h2>
+                        <p>The daily checker runs automatically every morning.</p>
+                    </div>`;
+            }
+        }
+
+        function isCopyableCode(code) {
+            if (!code) return false;
+            const normalized = String(code).trim().toLowerCase();
+            return normalized && !normalized.startsWith('none');
+        }
+
+        function resolveLogo(deal, kind) {
+            if (kind === 'team') {
+                return deal.team_logo_url || deal.team_logo || '';
+            }
+            return deal.restaurant_logo_url || deal.restaurant_logo || '';
+        }
+
+        function renderDeals(deals) {
+            const grid = document.getElementById('dealsGrid');
+            if (deals.length === 0) {
+                grid.innerHTML = `
+                    <div class="empty-state">
+                        <h3>No active promotions for today</h3>
+                        <p>Check back tomorrow after the morning update.</p>
+                    </div>`;
+                return;
+            }
+
+            grid.innerHTML = deals.map((d, index) => {
+                const copyable = isCopyableCode(d.coupon_code);
+                const expiresAt = d.expires_at || defaultExpiresAt;
+                const teamLogo = resolveLogo(d, 'team');
+                const restaurantLogo = resolveLogo(d, 'restaurant');
+
+                return `
+                <article class="card" data-expires-at="${escapeHtml(expiresAt || '')}">
+                    ${teamLogo ? `<img class="team-watermark" src="${escapeHtml(teamLogo)}" alt="" loading="lazy" onerror="this.remove()">` : ''}
+                    <div class="card-body">
+                        <div class="card-header">
+                            <div class="restaurant-meta">
+                                ${restaurantLogo
+                                    ? `<img class="restaurant-logo" src="${escapeHtml(restaurantLogo)}" alt="${escapeHtml(d.restaurant)} logo" loading="lazy" width="40" height="40" onerror="this.style.visibility='hidden'">`
+                                    : `<div class="restaurant-logo" aria-hidden="true"></div>`}
+                                <div class="restaurant-name">${escapeHtml(d.restaurant)}</div>
+                            </div>
+                            <span class="badge">${escapeHtml(d.league)}</span>
+                        </div>
+
+                        <h2 class="reward">${escapeHtml(d.reward)}</h2>
+
+                        <div class="meta-list">
+                            <div class="meta-row">
+                                <span class="meta-label">Team</span>
+                                <span class="meta-value">${escapeHtml(d.team)}</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Trigger</span>
+                                <span class="meta-value">${escapeHtml(d.activated_by || 'Game performance')}</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Redeem</span>
+                                <span class="meta-value">${escapeHtml(d.redemption_method)}</span>
+                            </div>
+                            <div class="meta-row">
+                                <span class="meta-label">Window</span>
+                                <span class="meta-value">${escapeHtml(d.redemption_window)}</span>
+                            </div>
+                        </div>
+
+                        ${d.coupon_code ? `
+                            <div class="code-panel ${copyable ? 'code-copyable' : ''}">
+                                <div>
+                                    <span class="code-label">Coupon code</span>
+                                    <div class="code-value" id="code-${index}">${escapeHtml(d.coupon_code)}</div>
+                                </div>
+                                ${copyable ? `<button type="button" class="copy-btn" data-code="${escapeHtml(d.coupon_code)}">Copy</button>` : ''}
+                            </div>` : ''}
+
+                        <div class="countdown" data-countdown>Calculating time left…</div>
+                    </div>
+                    ${d.source ? `
+                        <div class="card-footer">
+                            <a href="${escapeHtml(d.source)}" target="_blank" rel="noopener" class="link-btn">Official promo terms →</a>
+                        </div>` : ''}
+                </article>`;
+            }).join('');
+
+            grid.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', () => copyCouponCode(btn));
+            });
+
+            updateCountdowns();
+        }
+
+        function filterDeals() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const league = document.getElementById('leagueSelect').value;
+
+            const filtered = allDeals.filter(d => {
+                const matchesSearch = d.team.toLowerCase().includes(search) || d.restaurant.toLowerCase().includes(search);
+                const matchesLeague = league === 'all' || d.league.toLowerCase() === league;
+                return matchesSearch && matchesLeague;
+            });
+
+            renderDeals(filtered);
+        }
+
+        async function copyCouponCode(button) {
+            const code = button.dataset.code || '';
+            if (!code) return;
+
+            try {
+                if (navigator.clipboard && window.isSecureContext) {
+                    await navigator.clipboard.writeText(code);
+                } else {
+                    const textarea = document.createElement('textarea');
+                    textarea.value = code;
+                    textarea.setAttribute('readonly', '');
+                    textarea.style.position = 'fixed';
+                    textarea.style.left = '-9999px';
+                    document.body.appendChild(textarea);
+                    textarea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textarea);
+                }
+
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                showToast('Copied!');
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                    button.classList.remove('copied');
+                }, 1500);
+            } catch (err) {
+                showToast('Could not copy');
+            }
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toastTimer);
+            toastTimer = setTimeout(() => toast.classList.remove('show'), 1600);
+        }
+
+        function parseExpiresAt(value) {
+            if (!value) return getPacificMidnightTonight();
+            const normalized = String(value).replace(/([+-]\d{2})(\d{2})$/, '$1:$2');
+            const parsed = new Date(normalized);
+            if (!Number.isNaN(parsed.getTime())) return parsed;
+            return getPacificMidnightTonight();
+        }
+
+        function getPacificMidnightTonight() {
+            const parts = new Intl.DateTimeFormat('en-US', {
+                timeZone: 'America/Los_Angeles',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit'
+            }).formatToParts(new Date());
+            const lookup = Object.fromEntries(parts.map(p => [p.type, p.value]));
+            return new Date(`${lookup.year}-${lookup.month}-${lookup.day}T23:59:59-07:00`);
+        }
+
+        function formatRemaining(ms) {
+            if (ms <= 0) return 'Expired';
+            const totalMinutes = Math.floor(ms / 60000);
+            const hours = Math.floor(totalMinutes / 60);
+            const minutes = totalMinutes % 60;
+            if (hours > 0) return `${hours}h ${minutes}m left`;
+            return `${minutes}m left`;
+        }
+
+        function updateCountdowns() {
+            const now = Date.now();
+            document.querySelectorAll('.card[data-expires-at]').forEach(card => {
+                const el = card.querySelector('[data-countdown]');
+                if (!el) return;
+                const expires = parseExpiresAt(card.dataset.expiresAt);
+                const remaining = expires.getTime() - now;
+                el.classList.remove('urgent', 'expired');
+
+                if (remaining <= 0) {
+                    el.classList.add('expired');
+                    el.innerHTML = '<strong>Expired</strong> — this deal window has closed.';
+                    return;
+                }
+
+                if (remaining <= 2 * 60 * 60 * 1000) el.classList.add('urgent');
+                el.innerHTML = `Expires tonight · <strong>${formatRemaining(remaining)}</strong>`;
+            });
+        }
+
+        function startCountdownTicker() {
+            clearInterval(countdownTimer);
+            updateCountdowns();
+            countdownTimer = setInterval(updateCountdowns, 30000);
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.dataset.theme = html.dataset.theme === 'dark' ? 'light' : 'dark';
+        }
+
+        function escapeHtml(str) {
+            return String(str || '').replace(/[&<>"']/g, m => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[m]));
+        }
+
+        loadDeals();
+    </script>
+</body>
+</html>
