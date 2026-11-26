@@ -1,5 +1,62 @@
 {
-  "last_updated": "2026-11-25 14:15:43 PST",
-  "expires_at": "2026-11-25T23:59:59-0800",
-  "deals": []
+  "last_updated": "2026-11-26 14:11:46 PST",
+  "expires_at": "2026-11-26T23:59:59-0800",
+  "deals": [
+    {
+      "id": "ducks-mcdonalds-01",
+      "team": "Anaheim Ducks",
+      "team_id": "25",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "McDonald's",
+      "promotion_name": "Ducks Home Win McGriddles",
+      "trigger": {
+        "type": "win",
+        "location": "home",
+        "metric": "score",
+        "threshold": null
+      },
+      "reward": "$2 Sausage, Egg & Cheese McGriddles",
+      "coupon_code": "None (App Rewards & Deals)",
+      "redemption_method": "McDonald's App (breakfast hours)",
+      "redemption_window": "Next day during breakfast hours",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/ducks/fans/mcdonalds-ducks-win",
+      "active": true,
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=mcdonalds.com&sz=128",
+      "activated_by": "San Jose Sharks at Anaheim Ducks",
+      "expires_at": "2026-11-26T23:59:59-0800"
+    },
+    {
+      "id": "ducks-cfa-01",
+      "team": "Anaheim Ducks",
+      "team_id": "25",
+      "league": "nhl",
+      "sport": "hockey",
+      "restaurant": "Chick-fil-A",
+      "promotion_name": "Score 5 Goals",
+      "trigger": {
+        "type": "stat",
+        "location": "home",
+        "metric": "goals",
+        "threshold": 5
+      },
+      "reward": "Free Original Chick-fil-A Chicken Sandwich",
+      "coupon_code": "None (Location-based in app)",
+      "redemption_method": "Chick-fil-A App (claim at Honda Center)",
+      "redemption_window": "Claim by 11:59 PM game night; redeem within 3 business days",
+      "valid_states": [
+        "CA"
+      ],
+      "source": "https://www.nhl.com/ducks/fans/cfa-5goals-ana",
+      "team_logo_url": "https://a.espncdn.com/i/teamlogos/nhl/500/ana.png",
+      "restaurant_logo_url": "https://www.google.com/s2/favicons?domain=chick-fil-a.com&sz=128",
+      "active": true,
+      "activated_by": "San Jose Sharks at Anaheim Ducks",
+      "expires_at": "2026-11-26T23:59:59-0800"
+    }
+  ]
 }
